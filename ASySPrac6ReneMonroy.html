@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Sistemas en Diferencias</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-11-22"><meta name="DC.source" content="ASySPrac6ReneMonroy.m"><style type="text/css">
+      --><title>Pr&aacute;ctica 6: Sistemas diferenciales y en diferencias</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-11-22"><meta name="DC.source" content="ASySPrac6ReneMonroy.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Sistemas en Diferencias</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Ejercicio 3</a></li><li><a href="#3">Ejercicio 4</a></li><li><a href="#5">Ejercicio 5</a></li><li><a href="#7">Ejercicio 6</a></li><li><a href="#9">Ejercicio 7</a></li></ul></div><h2 id="1">Ejercicio 3</h2><p>Determina la respuesta a entrada cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+  </style></head><body><div class="content"><h1>Pr&aacute;ctica 6: Sistemas diferenciales y en diferencias</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Sistemas en Diferencias</a></li><li><a href="#2">Ejercicio 3</a></li><li><a href="#4">Ejercicio 4</a></li><li><a href="#6">Ejercicio 5</a></li><li><a href="#8">Ejercicio 6</a></li><li><a href="#10">Ejercicio 7</a></li></ul></div><h2 id="1">Sistemas en Diferencias</h2><h2 id="2">Ejercicio 3</h2><p>Determina la respuesta a entrada cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 ent0([1,1,1],[1,0,0],[0.5,1],[0,0],0*heaviside(n),5)
 </pre><pre class="codeoutput"> 
@@ -90,7 +90,7 @@ y(n)=
    + ----------------------------------------
                          3
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_01.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0">https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0</a></p><h2 id="3">Ejercicio 4</h2><p>Determina la resouesta a estado cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_01.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0">https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0</a></p><h2 id="4">Ejercicio 4</h2><p>Determina la resouesta a estado cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 ci0([1,1,1],[1,0,0],[0,0],[0.5,1],((0.5)^n)*heaviside(n),5)
 </pre><pre class="codeoutput"> 
@@ -121,7 +121,7 @@ where
               2
 
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_02.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0">https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0</a></p><h2 id="5">Ejercicio 5</h2><p>Determine la respuesta total del sistema <img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_02.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0">https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0</a></p><h2 id="6">Ejercicio 5</h2><p>Determine la respuesta total del sistema <img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 RT([1,1,1],[1,0,0],[0.5,1],[0.5,1],((0.5)^n)*heaviside(n),5)
 </pre><pre class="codeoutput"> 
@@ -152,7 +152,7 @@ where
               2
 
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_03.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="7">Ejercicio 6</h2><p>Determine la respuesta total del sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq14368982306075698669.png" alt="$x[n]=u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq12019896080368178577.png" alt="$y[0]=0$">,  <img src="ASySPrac6ReneMonroy_eq05774860694486457594.png" alt="$y[1]=0$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_03.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="8">Ejercicio 6</h2><p>Determine la respuesta total del sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq14368982306075698669.png" alt="$x[n]=u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq12019896080368178577.png" alt="$y[0]=0$">,  <img src="ASySPrac6ReneMonroy_eq05774860694486457594.png" alt="$y[1]=0$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 RT([1,1,1],[1,0,0],[0,0],[0.5,1],heaviside(n),10)
 </pre><pre class="codeoutput"> 
@@ -170,7 +170,7 @@ y(n)=
 - - -----------------
 3           3
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_04.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="9">Ejercicio 7</h2><pre class="codeinput">figure
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_04.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="10">Ejercicio 7</h2><pre class="codeinput">figure
 subplot(3,2,<span class="string">'aling'</span>)
 imshow(<span class="string">'ent0.jpg'</span>)
 subplot(3,2,<span class="string">'aling'</span>)
@@ -182,10 +182,12 @@ imshow(<span class="string">'esc.jpg'</span>)
 </pre><pre class="codeoutput error">Error using subplot (line 214)
 Invalid syntax.
 
-Error in ASySPrac6ReneMonroy (line 75)
+Error in ASySPrac6ReneMonroy (line 77)
 subplot(3,2,'aling')
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
+%% Práctica 6: Sistemas diferenciales y en diferencias
+%
 %% Sistemas en Diferencias 
 %%  Ejercicio 3 
 %
