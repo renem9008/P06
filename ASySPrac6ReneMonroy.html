@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Pr&aacute;ctica 6: Sistemas diferenciales y en diferencias</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Sistemas en Diferencias</a></li><li><a href="#2">Ejercicio 3</a></li><li><a href="#4">Ejercicio 4</a></li><li><a href="#6">Ejercicio 5</a></li><li><a href="#8">Ejercicio 6</a></li><li><a href="#10">Ejercicio 7</a></li></ul></div><h2 id="1">Sistemas en Diferencias</h2><h2 id="2">Ejercicio 3</h2><p>Determina la respuesta a entrada cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+  </style></head><body><div class="content"><h1>Pr&aacute;ctica 6: Sistemas diferenciales y en diferencias</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Sistemas en Diferencias (1)</a></li><li><a href="#2">Ejercicio 3</a></li><li><a href="#4">Ejercicio 4</a></li><li><a href="#6">Ejercicio 5</a></li><li><a href="#8">Ejercicio 6</a></li><li><a href="#10">Ejercicio 7</a></li></ul></div><h2 id="1">Sistemas en Diferencias (1)</h2><h2 id="2">Ejercicio 3</h2><p>Determina la respuesta a entrada cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 ent0([1,1,1],[1,0,0],[0.5,1],[0,0],0*heaviside(n),5)
 </pre><pre class="codeoutput"> 
@@ -188,7 +188,7 @@ subplot(3,2,'aling')
 ##### SOURCE BEGIN #####
 %% Práctica 6: Sistemas diferenciales y en diferencias
 %
-%% Sistemas en Diferencias 
+%% Sistemas en Diferencias (1)
 %%  Ejercicio 3 
 %
 % Determina la respuesta a entrada cero del siguiente sistema 
