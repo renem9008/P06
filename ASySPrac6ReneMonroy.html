@@ -102,7 +102,7 @@ sqrt(3) exp| - - | sin| --------- | 2
 -------------------------------------
                   3
 
-</pre><p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/s/co733wm9wus1qjx/respuestaimpulso.m?dl=0">https://www.dropbox.com/s/co733wm9wus1qjx/respuestaimpulso.m?dl=0</a></p><h2 id="12">Ejercicio 3</h2><p>Muestre la respuesta a entrada cero del siguiente sistema diferencial.</p><p><img vspace="5" hspace="5" src="E1.png" alt=""> </p><p><img vspace="5" hspace="5" src="E2.png" alt=""> </p><pre class="codeinput">syms <span class="string">t</span>
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_01.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/s/co733wm9wus1qjx/respuestaimpulso.m?dl=0">https://www.dropbox.com/s/co733wm9wus1qjx/respuestaimpulso.m?dl=0</a></p><h2 id="12">Ejercicio 3</h2><p>Muestre la respuesta a entrada cero del siguiente sistema diferencial.</p><p><img vspace="5" hspace="5" src="E1.png" alt=""> </p><p><img vspace="5" hspace="5" src="E2.png" alt=""> </p><pre class="codeinput">syms <span class="string">t</span>
 respuesta0([1 1 1],[1],[1,1],10)
 </pre><pre class="codeoutput">Y(s)=
    s + 2
@@ -124,7 +124,7 @@ y(t)=
 exp| - - | | cos| --------- | + sqrt(3) sin| --------- | |
    \   2 / \    \     2     /              \     2     / /
 
-</pre><p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/s/r93mk2ti0zx9g8p/respuesta0.m?dl=0">https://www.dropbox.com/s/r93mk2ti0zx9g8p/respuesta0.m?dl=0</a></p><h2 id="17">Ejercicio 4</h2><p>Muestre la respuesta a estado cero del siguiente sistema diferencial.</p><p><img vspace="5" hspace="5" src="E1.png" alt=""> </p><p><img vspace="5" hspace="5" src="E2.png" alt=""> </p><pre class="codeinput">syms <span class="string">t</span>
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_02.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/s/r93mk2ti0zx9g8p/respuesta0.m?dl=0">https://www.dropbox.com/s/r93mk2ti0zx9g8p/respuesta0.m?dl=0</a></p><h2 id="17">Ejercicio 4</h2><p>Muestre la respuesta a estado cero del siguiente sistema diferencial.</p><p><img vspace="5" hspace="5" src="E1.png" alt=""> </p><p><img vspace="5" hspace="5" src="E2.png" alt=""> </p><pre class="codeinput">syms <span class="string">t</span>
 estado0([1 1 1],[1],exp(-t)*heaviside(t),10)
 </pre><pre class="codeoutput">Y(s)=
           1
@@ -148,7 +148,7 @@ y(t)=
 exp(-t) - exp| - - | | cos| --------- | - ------------------------ |
              \   2 / \    \     2     /               3            /
 
-</pre><p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/s/wvuccahj0pkoblz/estado0.m?dl=0">https://www.dropbox.com/s/wvuccahj0pkoblz/estado0.m?dl=0</a></p><h2 id="22">Ejercicio 5</h2><p>Respuesta total (simb&oacute;lico, gr&aacute;fica) Para la ecuaci&oacute;n:</p><p><img src="ASySPrac6ReneMonroy_eq02417916490808887650.png" alt="$$\ddot{y}(t)+\dot{y}(t)+y(t)=x(t),\;\;con\;x(t)=e^{-t}u(t),\;y(0)=1,\;y'(0)=1$$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>, 1);
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_03.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/s/wvuccahj0pkoblz/estado0.m?dl=0">https://www.dropbox.com/s/wvuccahj0pkoblz/estado0.m?dl=0</a></p><h2 id="22">Ejercicio 5</h2><p>Respuesta total (simb&oacute;lico, gr&aacute;fica) Para la ecuaci&oacute;n:</p><p><img src="ASySPrac6ReneMonroy_eq02417916490808887650.png" alt="$$\ddot{y}(t)+\dot{y}(t)+y(t)=x(t),\;\;con\;x(t)=e^{-t}u(t),\;y(0)=1,\;y'(0)=1$$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>, 1);
 syms <span class="string">t</span>
 resp_total([1 1 1],[1],[1,1],exp(-t)*heaviside(t),10)
 </pre><pre class="codeoutput">                     2
@@ -188,11 +188,11 @@ y(t)=
 exp(-t) + -------------------------------------
                             3
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_01.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/home/se%C3%B1ales?preview=resp_total.m">https://www.dropbox.com/home/se%C3%B1ales?preview=resp_total.m</a></p><h2 id="24">Ejercicio 6</h2><p>Respuesta total al escal&oacute;n con condiciones iniciales 0 (simb&oacute;lico, gr&aacute;fica) Para la ecuaci&oacute;n:</p><p><img src="ASySPrac6ReneMonroy_eq10344764740307826406.png" alt="$$\ddot{y}(t)+\dot{y}(t)+y(t)=x(t),\;\;con\;x(t)=u(t),\;y(0)=0,\;y'(0)=0$$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>, 1);
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_04.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en: <a href="https://www.dropbox.com/s/bd0jy0wkzb9j8hq/resp_total.m?dl=0">https://www.dropbox.com/s/bd0jy0wkzb9j8hq/resp_total.m?dl=0</a></p><h2 id="24">Ejercicio 6</h2><p>Respuesta total al escal&oacute;n con condiciones iniciales 0 (simb&oacute;lico, gr&aacute;fica) Para la ecuaci&oacute;n:</p><p><img src="ASySPrac6ReneMonroy_eq10344764740307826406.png" alt="$$\ddot{y}(t)+\dot{y}(t)+y(t)=x(t),\;\;con\;x(t)=u(t),\;y(0)=0,\;y'(0)=0$$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>, 1);
 syms <span class="string">t</span>
 resp_escalon([1 1 1],[1],[0,0],heaviside(t),10)
 <span class="comment">% El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en:</span>
-<span class="comment">% &lt;https://www.dropbox.com/home/se%C3%B1ales?preview=resp_escalon.m&gt;</span>
+<span class="comment">% &lt;https://www.dropbox.com/s/rrkpj429u96v3m6/resp_escalon.m?dl=0&gt;</span>
 </pre><pre class="codeoutput">                 2
 Y(s) + s Y(s) + s  Y(s)
 
@@ -228,7 +228,7 @@ y(t)=
 1 - exp| - - | | cos| --------- | + ------------------------ |
        \   2 / \    \     2     /               3            /
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_02.png" alt=""> <h2 id="25">Ejercicio 7</h2><p>Usando subplot, despliega una figura con 5 gr&aacute;ficas</p><pre class="codeinput">figure
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_05.png" alt=""> <h2 id="25">Ejercicio 7</h2><p>Usando subplot, despliega una figura con 5 gr&aacute;ficas</p><pre class="codeinput">figure
 subplot(3,2,1)
 imshow(<span class="string">'respuestaimpulso.jpg'</span>)
 subplot(3,2,2)
@@ -239,10 +239,10 @@ subplot(3,2,4)
 imshow(<span class="string">'resp_total.jpg'</span>)
 subplot(3,2,5)
 imshow(<span class="string">'resp_escalon.jpg'</span>)
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_03.png" alt=""> <h2 id="26">Sistemas en diferencias</h2><h2 id="27">Ejercicio 1</h2><p>Programa que muestra la funci&oacute;n de transferencia del sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">syms <span class="string">n</span>
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_06.png" alt=""> <h2 id="26">Sistemas en diferencias</h2><h2 id="27">Ejercicio 1</h2><p>Programa que muestra la funci&oacute;n de transferencia del sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">syms <span class="string">n</span>
 fztransferencia([1 1 1],[1],[0.5 1],[1],(0.5)^(n)*heaviside(n))
 <span class="comment">% El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en:</span>
-<span class="comment">% &lt;https://www.dropbox.com/home/se%C3%B1ales?preview=fztransferencia.m&gt;</span>
+<span class="comment">% &lt;https://www.dropbox.com/s/bif3zlgcwzl1wl6/fztransferencia.m?dl=0&gt;</span>
 </pre><pre class="codeoutput">H(z)=
    2
 4 z  + 4 z + 4
@@ -253,7 +253,7 @@ fztransferencia([1 1 1],[1],[0.5 1],[1],(0.5)^(n)*heaviside(n))
 </pre><h2 id="28">Ejercicio 2</h2><p>Respuesta al impulso (simb&oacute;lico, gr&aacute;fica) Para la ecuaci&oacute;n:</p><p><img src="ASySPrac6ReneMonroy_eq07863338673104596282.png" alt="$$y[n-2]+y[n-1]+y[n]=x[n],\;\;con\;x(t)=(0.5)^{n}u[n],\;y[-1]=1,\;y[-2]=1$$"></p><p>como la ecuaci&oacute;n es&aacute; en formato de atraso, la cambiamos a formato de adelanto para que haya consistencia con el programa realizado,quedando de la siguiente forma</p><p><img src="ASySPrac6ReneMonroy_eq00312310781439124014.png" alt="$$y[n]+y[n+1]+y[n+2]=x[n+2],\;\;con\;x(t)=(0.5)^{n}u[n],\;y[0]=0,\;y[1]=0,\;x[0]=1$$"></p><p>como la ecuaci&oacute;n es&aacute; en formato de atraso, la cambiamos a formato de adelanto para que haya consistencia con el programa realizado,quedando de la siguiente forma: las condiciones iniciales deben de ser 0</p><p><img src="ASySPrac6ReneMonroy_eq00312310781439124014.png" alt="$$y[n]+y[n+1]+y[n+2]=x[n+2],\;\;con\;x(t)=(0.5)^{n}u[n],\;y[0]=0,\;y[1]=0,\;x[0]=1$$"></p><pre class="codeinput">syms <span class="string">n</span>
 Kronecker([1 1 1],[1 0],[0.5 1],[1],kroneckerDelta(n),5)
 <span class="comment">% El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en:</span>
-<span class="comment">% &lt;https://www.dropbox.com/home/se%C3%B1ales?preview=Kronecker.m&gt;</span>
+<span class="comment">% &lt;https://www.dropbox.com/s/oj0k52a81qqdctg/Kronecker.m?dl=0&gt;</span>
 </pre><pre class="codeoutput">Y(z)=
  
 La respuesta al impulso es
@@ -271,7 +271,7 @@ y(n)=
    + ----------------------------------------
                          3
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_04.png" alt=""> <h2 id="29">Ejercicio 3</h2><p>Determina la respuesta a entrada cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_07.png" alt=""> <h2 id="29">Ejercicio 3</h2><p>Determina la respuesta a entrada cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 ent0([1,1,1],[1,0,0],[0.5,1],[0,0],0*heaviside(n),5)
 </pre><pre class="codeoutput"> 
@@ -295,7 +295,7 @@ y(n)=
    + ----------------------------------------
                          3
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_05.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0">https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0</a></p><h2 id="31">Ejercicio 4</h2><p>Determina la resouesta a estado cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_08.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0">https://www.dropbox.com/s/zjyewsmb9aw9wxt/ent0.m?dl=0</a></p><h2 id="31">Ejercicio 4</h2><p>Determina la resouesta a estado cero del siguiente sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 ci0([1,1,1],[1,0,0],[0,0],[0.5,1],((0.5)^n)*heaviside(n),5)
 </pre><pre class="codeoutput"> 
@@ -326,7 +326,7 @@ where
               2
 
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_06.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0">https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0</a></p><h2 id="33">Ejercicio 5</h2><p>Determine la respuesta total del sistema <img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_09.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0">https://www.dropbox.com/s/yaxsj8rflrqlwjc/ci0.m?dl=0</a></p><h2 id="33">Ejercicio 5</h2><p>Determine la respuesta total del sistema <img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq07641524355348424264.png" alt="$x[n]=(0.5)^{n}u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq08273652189708245026.png" alt="$y[0]=1$">,  <img src="ASySPrac6ReneMonroy_eq10783038759891113815.png" alt="$y[1]=0.5$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 RT([1,1,1],[1,0,0],[0.5,1],[0.5,1],((0.5)^n)*heaviside(n),5)
 </pre><pre class="codeoutput"> 
@@ -357,7 +357,7 @@ where
               2
 
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_07.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="35">Ejercicio 6</h2><p>Determine la respuesta total del sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq14368982306075698669.png" alt="$x[n]=u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq12019896080368178577.png" alt="$y[0]=0$">,  <img src="ASySPrac6ReneMonroy_eq05774860694486457594.png" alt="$y[1]=0$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_10.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="35">Ejercicio 6</h2><p>Determine la respuesta total del sistema</p><p><img src="ASySPrac6ReneMonroy_eq12408771379856642930.png" alt="$y[n+2]+y[n+1]+y[n]=x[n+2]$"></p><p>Con entrada</p><p><img src="ASySPrac6ReneMonroy_eq14368982306075698669.png" alt="$x[n]=u[n]$"></p><p>Y condiciones iniciales</p><p><img src="ASySPrac6ReneMonroy_eq12019896080368178577.png" alt="$y[0]=0$">,  <img src="ASySPrac6ReneMonroy_eq05774860694486457594.png" alt="$y[1]=0$"></p><pre class="codeinput">sympref(<span class="string">'HeavisideAtOrigin'</span>,1)
 syms <span class="string">n</span>;
 RT([1,1,1],[1,0,0],[0,0],[0.5,1],heaviside(n),10)
 </pre><pre class="codeoutput"> 
@@ -375,14 +375,16 @@ y(n)=
 - - -----------------
 3           3
 
-</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_08.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="37">Ejercicio 7</h2><pre class="codeinput">figure
+</pre><img vspace="5" hspace="5" src="ASySPrac6ReneMonroy_11.png" alt=""> <p>El c&oacute;digo de la funci&oacute;n utilizada se puede consultar en <a href="https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0">https://www.dropbox.com/s/y5agbjjsfn974ho/RT.m?dl=0</a></p><h2 id="37">Ejercicio 7</h2><pre class="codeinput">figure
 subplot(3,2,1)
-imshow(<span class="string">'ent0.jpg'</span>)
+imshow(<span class="string">'respuestaimpulso.jpg'</span>)
 subplot(3,2,2)
+imshow(<span class="string">'ent0.jpg'</span>)
+subplot(3,2,3)
 imshow(<span class="string">'ci0.jpg'</span>)
 subplot(3,2,3)
 imshow(<span class="string">'RT.jpg'</span>)
-subplot(3,2,4)
+subplot(3,2,5)
 imshow(<span class="string">'esc.jpg'</span>)
 </pre><pre class="codeoutput error">Error using images.internal.getImageFromFile (line 11)
 Cannot find the specified file: "ent0.jpg".
@@ -393,7 +395,7 @@ Error in images.internal.imageDisplayParseInputs (line 74)
 Error in imshow (line 241)
     images.internal.imageDisplayParseInputs({'Parent','Border','Reduce'},preparsed_varargin{:});
 
-Error in ASySPrac6ReneMonroy (line 224)
+Error in ASySPrac6ReneMonroy (line 226)
 imshow('ent0.jpg')
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
@@ -484,7 +486,7 @@ syms t
 resp_total([1 1 1],[1],[1,1],exp(-t)*heaviside(t),10)
 %%
 % El código de la función utilizada se puede consultar en: 
-% <https://www.dropbox.com/home/se%C3%B1ales?preview=resp_total.m>
+% <https://www.dropbox.com/s/bd0jy0wkzb9j8hq/resp_total.m?dl=0>
 %%  Ejercicio 6 
 % Respuesta total al escalón con condiciones iniciales 0 (simbólico, gráfica)
 % Para la ecuación:
@@ -495,7 +497,7 @@ sympref('HeavisideAtOrigin', 1);
 syms t
 resp_escalon([1 1 1],[1],[0,0],heaviside(t),10)
 % El código de la función utilizada se puede consultar en: 
-% <https://www.dropbox.com/home/se%C3%B1ales?preview=resp_escalon.m>
+% <https://www.dropbox.com/s/rrkpj429u96v3m6/resp_escalon.m?dl=0>
 %% Ejercicio 7 
 % Usando subplot, despliega una figura con 5 gráficas
 figure
@@ -522,7 +524,7 @@ imshow('resp_escalon.jpg')
 syms n
 fztransferencia([1 1 1],[1],[0.5 1],[1],(0.5)^(n)*heaviside(n))
 % El código de la función utilizada se puede consultar en: 
-% <https://www.dropbox.com/home/se%C3%B1ales?preview=fztransferencia.m>
+% <https://www.dropbox.com/s/bif3zlgcwzl1wl6/fztransferencia.m?dl=0>
 %% Ejercicio 2 
 % Respuesta al impulso (simbólico, gráfica)
 % Para la ecuación:
@@ -544,7 +546,7 @@ fztransferencia([1 1 1],[1],[0.5 1],[1],(0.5)^(n)*heaviside(n))
 syms n
 Kronecker([1 1 1],[1 0],[0.5 1],[1],kroneckerDelta(n),5)
 % El código de la función utilizada se puede consultar en: 
-% <https://www.dropbox.com/home/se%C3%B1ales?preview=Kronecker.m>
+% <https://www.dropbox.com/s/oj0k52a81qqdctg/Kronecker.m?dl=0>
 
 %%  Ejercicio 3 
 %
@@ -620,12 +622,14 @@ RT([1,1,1],[1,0,0],[0,0],[0.5,1],heaviside(n),10)
 %% Ejercicio 7
 figure
 subplot(3,2,1)
-imshow('ent0.jpg')
+imshow('respuestaimpulso.jpg')
 subplot(3,2,2)
+imshow('ent0.jpg')
+subplot(3,2,3)
 imshow('ci0.jpg')
 subplot(3,2,3)
 imshow('RT.jpg')
-subplot(3,2,4)
+subplot(3,2,5)
 imshow('esc.jpg')
 
 
